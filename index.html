@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Companion</title>
+  <link rel="stylesheet" href="src/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="app-container">
+    <header>
+      <div class="status-indicator">
+        <span class="status-dot"></span>
+        <span id="status-text">Ready</span>
+      </div>
+      <h2>AI Companion</h2>
+    </header>
+
+    <main>
+      <div class="avatar-section">
+        <div id="avatar">
+          <!-- BASE FACE -->
+          <img id="base" src="assets/face.png" alt="Avatar Base" />
+
+          <!-- EMOTION LAYER -->
+          <img id="emotion" style="opacity:0" alt="Avatar Emotion" />
+
+          <!-- VISEME MOUTH -->
+          <img id="viseme" style="opacity:0" alt="Avatar Mouth" />
+
+          <!-- BLINK -->
+          <img id="blink" src="assets/blink.png" style="opacity:0" alt="Avatar Blink" />
+        </div>
+      </div>
+
+      <div class="chat-section">
+        <div id="log" class="chat-log">
+          <div class="welcome-message">Hello! I'm listening.</div>
+        </div>
+
+        <div class="controls-area">
+          <div class="input-wrapper">
+            <input id="text" type="text" placeholder="Type a message..." autocomplete="off">
+            <button id="send">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <audio id="audioPlayer"></audio>
+
+  <script src="src/FaceRig.js"></script>
+  <script src="src/app.js"></script>
+</body>
+
+</html>
