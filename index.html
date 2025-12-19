@@ -260,7 +260,8 @@
   </script>
 
   <script type="text/javascript">
-    let ws = new WebSocket("ws://localhost:8080");
+    //let ws = new WebSocket("ws://localhost:8080");
+    let ws = new WebSocket("ws://twodavatarchat-xe6t.onrender.com");
 
     const baseImg = document.getElementById("base");
     const emotionImg = document.getElementById("emotion");
@@ -324,8 +325,8 @@
       const txt = document.getElementById("text").value.trim();
       if (!txt) return;
 
-      fetch("http://localhost:3000/chat", {
-      // fetch("https://twodavatarchat-xe6t.onrender.com/chat", {
+      //fetch("http://localhost:3000/chat", {
+      fetch("https://twodavatarchat-xe6t.onrender.com/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text: txt })
@@ -748,5 +749,6 @@
     });    
   </script>
 </body>
+
 
 </html>
